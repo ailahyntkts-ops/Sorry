@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For You</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+body{
+  background:linear-gradient(135deg,#ffd6eb,#fff5fa);
+  font-family:'Poppins',sans-serif;
+  text-align:center;
+  padding:70px 20px;
+  margin:0;
+  overflow:hidden;
+}
+
+.card{
+  background:white;
+  max-width:390px;
+  margin:auto;
+  padding:36px 26px;
+  border-radius:28px;
+  box-shadow:0 12px 35px rgba(255,105,180,0.18);
+  border:1px solid #ffe3f0;
+  position:relative;
+  z-index:2;
+}
+
+h1{
+  font-family:'Great Vibes',cursive;
+  font-size:42px;
+  color:#ff4fa3;
+  margin:0;
+}
+
+.decor{
+  font-size:20px;
+  margin:8px 0 12px;
+}
+
+.date{
+  color:#b77a96;
+  font-size:13px;
+  margin-bottom:20px;
+}
+
+button{
+  background:linear-gradient(135deg,#ff66ad,#ff8fc5);
+  border:none;
+  color:white;
+  padding:12px 24px;
+  border-radius:22px;
+  font-size:14px;
+  cursor:pointer;
+  box-shadow:0 6px 16px rgba(255,105,180,0.25);
+}
+
+button:hover{
+  transform:scale(1.04);
+}
+
+.step{
+  display:none;
+  margin-top:18px;
+  line-height:1.8;
+  color:#555;
+  font-size:14px;
+  animation:fadeIn 0.6s ease;
+}
+
+.final{
+  color:#ff4fa3;
+  margin-top:10px;
+  font-weight:500;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* efek jatuh */
+.fall{
+  position:fixed;
+  top:-40px;
+  font-size:24px;
+  animation:drop 4s linear forwards;
+  z-index:1;
+  pointer-events:none;
+}
+
+@keyframes drop{
+  0%{transform:translateY(0) rotate(0deg); opacity:1;}
+  100%{transform:translateY(110vh) rotate(360deg); opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>I'm Sorry</h1>
+<div class="decor">🎀 💗 🌸 💗 🎀</div>
+<p class="date">for you</p>
+
+<button id="btn" onclick="nextStep()">Open 🎀</button>
+
+<div id="step1" class="step">
+Aku cuma mau mulai dari satu kata…  
+<b>maaf.</b>
+</div>
+
+<div id="step2" class="step">
+Maaf kalau aku pernah nyakitin kamu,  
+atau bikin kamu ngerasa ga dihargai.  
+Aku sadar nggak semua hal yang aku lakuin itu benar.
+</div>
+
+<div id="step3" class="step">
+Aku nggak bisa balikin semuanya seperti dulu,  
+tapi aku pengen kamu tahu kalau  
+aku bener-bener nyesel dan belajar dari itu.
+</div>
+
+<div id="step4" class="step">
+Aku juga masih inget janji aku ke kamu…  
+tentang boneka itu.
+</div>
+
+<div id="step5" class="step">
+Boneka ini mungkin keliatan sederhana,  
+tapi aku harap dia bisa nemenin kamu  
+di saat kamu lagi capek, sedih,  
+atau bahkan pas kamu lagi bahagia.
+</div>
+
+<div id="step6" class="step">
+Anggap aja itu jadi pengganti aku,
+sesuatu yang selalu ada buat kamu,  
+walaupun aku nggak selalu bisa.
+</div>
+
+<div id="step7" class="step">
+Aku nggak minta apa-apa dari ini.  
+Aku cuma pengen kamu ngerasa  
+kalau kamu nggak sendirian.
+<p class="final">💗 Take care ya 💗</p>
+</div>
+
+</div>
+
+<script>
+let step = 0;
+
+function nextStep(){
+  step++;
+
+  if(step==1){
+    show("step1","Next 💗");
+  }else if(step==2){
+    show("step2","Next ✨");
+  }else if(step==3){
+    show("step3","A Little More 🎀");
+  }else if(step==4){
+    show("step4","About It 🌸");
+  }else if(step==5){
+    show("step5","Almost There 💌");
+  }else if(step==6){
+    show("step6","Last Message 💗");
+  }else if(step==7){
+    show("step7","One Last Tap 🎀");
+  }else if(step==8){
+    createRain();
+    document.getElementById("btn").style.display="none";
+  }
+}
+
+function show(id,text){
+  document.getElementById(id).style.display="block";
+  document.getElementById("btn").innerText=text;
+}
+
+function createRain(){
+  let symbols = ["💗","🌸","🎀","💕","🌷"];
+
+  for(let i=0;i<30;i++){
+    let item=document.createElement("div");
+    item.classList.add("fall");
+    item.innerText=symbols[Math.floor(Math.random()*symbols.length)];
+    item.style.left=Math.random()*100+"vw";
+    item.style.animationDuration=(Math.random()*2+3)+"s";
+    item.style.fontSize=(Math.random()*14+18)+"px";
+    document.body.appendChild(item);
+
+    setTimeout(()=>{item.remove();},5000);
+  }
+}
+</script>
+
+</body>
+</html>

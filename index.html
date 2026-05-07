@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+```h<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -7,94 +7,109 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
+
 body{
-  background:linear-gradient(135deg,#ffd6eb,#fff5fa);
-  font-family:'Poppins',sans-serif;
-  text-align:center;
-  padding:70px 20px;
-  margin:0;
-  overflow:hidden;
+background:linear-gradient(135deg,#ffd6eb,#fff5fa);
+font-family:'Poppins',sans-serif;
+text-align:center;
+padding:70px 20px;
+margin:0;
+overflow:hidden;
 }
 
 .card{
-  background:white;
-  max-width:390px;
-  margin:auto;
-  padding:36px 26px;
-  border-radius:28px;
-  box-shadow:0 12px 35px rgba(255,105,180,0.18);
-  border:1px solid #ffe3f0;
-  position:relative;
-  z-index:2;
+background:white;
+max-width:390px;
+margin:auto;
+padding:36px 26px;
+border-radius:28px;
+box-shadow:0 12px 35px rgba(255,105,180,0.18);
+border:1px solid #ffe3f0;
+position:relative;
+z-index:2;
 }
 
 h1{
-  font-family:'Great Vibes',cursive;
-  font-size:42px;
-  color:#ff4fa3;
-  margin:0;
+font-family:'Great Vibes',cursive;
+font-size:42px;
+color:#ff4fa3;
+margin:0;
 }
 
 .decor{
-  font-size:20px;
-  margin:8px 0 12px;
+font-size:20px;
+margin:8px 0 12px;
 }
 
 .date{
-  color:#b77a96;
-  font-size:13px;
-  margin-bottom:20px;
+color:#b77a96;
+font-size:13px;
+margin-bottom:20px;
 }
 
 button{
-  background:linear-gradient(135deg,#ff66ad,#ff8fc5);
-  border:none;
-  color:white;
-  padding:12px 24px;
-  border-radius:22px;
-  font-size:14px;
-  cursor:pointer;
-  box-shadow:0 6px 16px rgba(255,105,180,0.25);
+background:linear-gradient(135deg,#ff66ad,#ff8fc5);
+border:none;
+color:white;
+padding:12px 24px;
+border-radius:22px;
+font-size:14px;
+cursor:pointer;
+box-shadow:0 6px 16px rgba(255,105,180,0.25);
+transition:0.3s;
 }
 
 button:hover{
-  transform:scale(1.04);
+transform:scale(1.04);
 }
 
 .step{
-  display:none;
-  margin-top:18px;
-  line-height:1.8;
-  color:#555;
-  font-size:14px;
-  animation:fadeIn 0.6s ease;
+display:none;
+margin-top:18px;
+line-height:1.8;
+color:#555;
+font-size:14px;
+animation:fadeIn 0.6s ease;
 }
 
 .final{
-  color:#ff4fa3;
-  margin-top:10px;
-  font-weight:500;
+color:#ff4fa3;
+margin-top:10px;
+font-weight:500;
 }
 
 @keyframes fadeIn{
-  from{opacity:0; transform:translateY(10px);}
-  to{opacity:1; transform:translateY(0);}
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
-/* efek jatuh */
+/* Falling effects */
 .fall{
-  position:fixed;
-  top:-40px;
-  font-size:24px;
-  animation:drop 4s linear forwards;
-  z-index:1;
-  pointer-events:none;
+position:fixed;
+top:-40px;
+font-size:24px;
+animation:drop 4s linear forwards;
+z-index:1;
+pointer-events:none;
 }
 
 @keyframes drop{
-  0%{transform:translateY(0) rotate(0deg); opacity:1;}
-  100%{transform:translateY(110vh) rotate(360deg); opacity:0;}
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:1;
 }
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0;
+}
+}
+
 </style>
 </head>
 
@@ -127,7 +142,7 @@ aku bener-bener nyesel dan belajar dari itu.
 
 <div id="step4" class="step">
 Aku juga masih inget janji aku ke kamu…  
-tentang boneka itu.
+tentang boneka yang aku janjiin buat kamu.
 </div>
 
 <div id="step5" class="step">
@@ -138,66 +153,125 @@ atau bahkan pas kamu lagi bahagia.
 </div>
 
 <div id="step6" class="step">
-Anggap aja itu jadi pengganti aku,
-sesuatu yang selalu ada buat kamu,  
-walaupun aku nggak selalu bisa.
+Aku juga mau minta maaf…  
+maaf ya kalau aku sempat menjauh dari kamu.
 </div>
 
 <div id="step7" class="step">
+Bukan karena aku benci atau udah ga peduli,  
+tapi karena aku belum sepenuhnya bisa move on dari kamu.  
+Kadang rasanya masih susah buat biasa aja setelah semua yang pernah ada.
+</div>
+
+<div id="step8" class="step">
+Tapi aku ga mau terus bikin semuanya jadi rumit.  
+Aku cuma pengen kamu bahagia,  
+meskipun sekarang semuanya udah berbeda.
+</div>
+
+<div id="step9" class="step">
 Aku nggak minta apa-apa dari ini.  
 Aku cuma pengen kamu ngerasa  
 kalau kamu nggak sendirian.
+</div>
+
+<div id="step10" class="step">
+Kalau suatu hari kamu capek,  
+butuh tempat cerita, atau butuh bantuan,  
+kamu bisa chat aku kapan aja.
 <p class="final">💗 Take care ya 💗</p>
 </div>
 
 </div>
 
 <script>
+
 let step = 0;
 
 function nextStep(){
-  step++;
 
-  if(step==1){
-    show("step1","Next 💗");
-  }else if(step==2){
-    show("step2","Next ✨");
-  }else if(step==3){
-    show("step3","A Little More 🎀");
-  }else if(step==4){
-    show("step4","About It 🌸");
-  }else if(step==5){
-    show("step5","Almost There 💌");
-  }else if(step==6){
-    show("step6","Last Message 💗");
-  }else if(step==7){
-    show("step7","One Last Tap 🎀");
-  }else if(step==8){
-    createRain();
-    document.getElementById("btn").style.display="none";
-  }
+step++;
+
+if(step==1){
+show("step1","Next 💗");
+}
+
+else if(step==2){
+show("step2","Next ✨");
+}
+
+else if(step==3){
+show("step3","A Little More 🎀");
+}
+
+else if(step==4){
+show("step4","About The Gift 🌸");
+}
+
+else if(step==5){
+show("step5","One More Thing 💌");
+}
+
+else if(step==6){
+show("step6","Keep Reading 💗");
+}
+
+else if(step==7){
+show("step7","Almost There 🎀");
+}
+
+else if(step==8){
+show("step8","Last Message 🌸");
+}
+
+else if(step==9){
+show("step9","Final Words 💌");
+}
+
+else if(step==10){
+show("step10","Tap Me 💗");
+}
+
+else if(step==11){
+createRain();
+document.getElementById("btn").style.display="none";
+}
+
 }
 
 function show(id,text){
-  document.getElementById(id).style.display="block";
-  document.getElementById("btn").innerText=text;
+document.getElementById(id).style.display="block";
+document.getElementById("btn").innerText=text;
 }
 
 function createRain(){
-  let symbols = ["💗","🌸","🎀","💕","🌷"];
 
-  for(let i=0;i<30;i++){
-    let item=document.createElement("div");
-    item.classList.add("fall");
-    item.innerText=symbols[Math.floor(Math.random()*symbols.length)];
-    item.style.left=Math.random()*100+"vw";
-    item.style.animationDuration=(Math.random()*2+3)+"s";
-    item.style.fontSize=(Math.random()*14+18)+"px";
-    document.body.appendChild(item);
+let symbols = ["💗","🌸","🎀","💕","🌷"];
 
-    setTimeout(()=>{item.remove();},5000);
-  }
+for(let i=0; i<35; i++){
+
+let item = document.createElement("div");
+
+item.classList.add("fall");
+
+item.innerText = symbols[Math.floor(Math.random()*symbols.length)];
+
+item.style.left = Math.random()*100 + "vw";
+
+item.style.animationDuration = (Math.random()*2 + 3) + "s";
+
+item.style.fontSize = (Math.random()*14 + 18) + "px";
+
+document.body.appendChild(item);
+
+setTimeout(() => {
+item.remove();
+},5000);
+
 }
+
+}
+
 </script>
 
 </body>

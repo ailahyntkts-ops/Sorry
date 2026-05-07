@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For You</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+background:linear-gradient(135deg,#ffd6eb,#fff5fa);
+font-family:'Poppins',sans-serif;
+text-align:center;
+padding:50px 20px;
+margin:0;
+overflow-x:hidden;
+}
+
+.card{
+background:white;
+max-width:390px;
+margin:auto;
+padding:36px 26px;
+border-radius:28px;
+box-shadow:0 12px 35px rgba(255,105,180,0.18);
+border:1px solid #ffe3f0;
+}
+
+h1{
+font-family:'Great Vibes',cursive;
+font-size:42px;
+color:#ff4fa3;
+margin:0;
+}
+
+.decor{
+font-size:20px;
+margin:8px 0 12px;
+}
+
+.date{
+color:#b77a96;
+font-size:13px;
+margin-bottom:25px;
+}
+
+.step{
+display:none;
+margin-top:18px;
+padding:16px;
+border-radius:18px;
+background:#fff8fc;
+line-height:1.8;
+color:#555;
+font-size:14px;
+animation:fadeIn 0.6s ease;
+box-shadow:0 4px 12px rgba(255,105,180,0.08);
+}
+
+.nextBtn{
+margin-top:16px;
+background:linear-gradient(135deg,#ff66ad,#ff8fc5);
+border:none;
+color:white;
+padding:10px 20px;
+border-radius:20px;
+font-size:13px;
+cursor:pointer;
+font-family:'Poppins',sans-serif;
+box-shadow:0 6px 16px rgba(255,105,180,0.20);
+transition:0.3s;
+}
+
+.nextBtn:hover{
+transform:scale(1.03);
+}
+
+.final{
+color:#ff4fa3;
+font-weight:500;
+margin-top:10px;
+}
+
+.scrollTop{
+display:none;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#ff66ad;
+color:white;
+border:none;
+padding:12px 14px;
+border-radius:50%;
+cursor:pointer;
+font-size:16px;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+z-index:99;
+}
+
+/* falling effect */
+.fall{
+position:fixed;
+top:-40px;
+font-size:24px;
+animation:drop 4s linear forwards;
+pointer-events:none;
+z-index:1;
+}
+
+@keyframes drop{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:1;
+}
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0;
+}
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(15px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>I'm Sorry</h1>
+<div class="decor">🎀 💗 🌸 💗 🎀</div>
+<p class="date">for you</p>
+
+<!-- STEP 1 -->
+<div id="step1" class="step" style="display:block;">
+Aku cuma mau mulai dari satu kata…  
+<b>maaf.</b>
+
+<br><br>
+<button class="nextBtn" onclick="nextStep(2,this)">
+Next 💗
+</button>
+</div>
+
+<!-- STEP 2 -->
+<div id="step2" class="step">
+Maaf kalau aku pernah nyakitin kamu,  
+atau bikin kamu ngerasa ga dihargai.  
+Aku sadar nggak semua hal yang aku lakuin itu benar.
+
+<br><br>
+<button class="nextBtn" onclick="nextStep(3,this)">
+Next ✨
+</button>
+</div>
+
+<!-- STEP 3 -->
+<div id="step3" class="step">
+Aku nggak bisa balikin semuanya seperti dulu,  
+tapi aku pengen kamu tahu kalau  
+aku bener-bener nyesel dan belajar dari itu.
+
+<br><br>
+<button class="nextBtn" onclick="nextStep(4,this)">
+A Little More 🎀
+</button>
+</div>
+
+<!-- STEP 4 -->
+<div id="step4" class="step">
+Aku juga mau minta maaf…  
+maaf ya kalau aku sempat menjauh dari kamu.
+
+<br><br>
+<button class="nextBtn" onclick="nextStep(5,this)">
+About The Gift 🌸
+</button>
+</div>
+
+<!-- STEP 5 -->
+<div id="step5" class="step">
+Bukan karena aku benci atau udah ga peduli,  
+tapi karena aku belum sepenuhnya bisa move on dari kamu.  
+Kadang rasanya masih susah buat biasa aja setelah semua yang pernah ada.
+
+<br><br>
+<button class="nextBtn" onclick="nextStep(6,this)">
+One More Thing 💌
+</button>
+</div>
+
+<!-- STEP 6 -->
+<div id="step6" class="step">
+Tapi aku ga mau terus bikin semuanya jadi rumit.  
+Aku cuma pengen kamu bahagia,  
+meskipun sekarang semuanya udah berbeda.
+
+<br><br>
+<button class="nextBtn" onclick="nextStep(7,this)">
+Keep Reading 💗
+</button>
+</div>
+
+<!-- STEP 7 -->
+<div id="step7" class="step">
+Aku juga masih inget janji aku ke kamu…  
+tentang boneka yang aku janjiin buat kamu.
+
+<br><br>
+<button class="nextBtn" onclick="nextStep(8,this)">
+Almost There 🎀
+</button>
+</div>
+
+<!-- STEP 8 -->
+<div id="step8" class="step">
+Boneka ini mungkin keliatan sederhana,  
+tapi aku harap dia bisa nemenin kamu  
+di saat kamu lagi capek, sedih,  
+atau bahkan pas kamu lagi bahagia.
+
+<br><br>
+<button class="nextBtn" onclick="nextStep(9,this)">
+Last Message 🌸
+</button>
+</div>
+
+<!-- STEP 9 -->
+<div id="step9" class="step">
+Aku nggak minta apa-apa dari ini.  
+Aku cuma pengen kamu ngerasa  
+kalau kamu nggak sendirian.
+
+<br><br>
+<button class="nextBtn" onclick="nextStep(10,this)">
+Final Words 💌
+</button>
+</div>
+
+<!-- STEP 10 -->
+<div id="step10" class="step">
+Kalau suatu hari kamu capek,  
+butuh tempat cerita, atau butuh bantuan,  
+kamu bisa chat aku kapan aja.
+
+<p class="final">
+💗 Take care ya 💗
+</p>
+
+<button class="nextBtn" onclick="createRain(); this.style.display='none';">
+Tap Me 🎀
+</button>
+
+</div>
+
+</div>
+
+<!-- Scroll Top -->
+<button class="scrollTop" id="scrollBtn" onclick="scrollToTop()">
+↑
+</button>
+
+<script>
+
+function nextStep(step,button){
+
+button.style.display = "none";
+
+let element = document.getElementById("step"+step);
+
+element.style.display = "block";
+
+element.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+}
+
+function createRain(){
+
+let symbols = ["💗","🌸","🎀","💕","🌷"];
+
+for(let i=0; i<35; i++){
+
+let item = document.createElement("div");
+
+item.classList.add("fall");
+
+item.innerText = symbols[Math.floor(Math.random()*symbols.length)];
+
+item.style.left = Math.random()*100 + "vw";
+
+item.style.animationDuration = (Math.random()*2 + 3) + "s";
+
+item.style.fontSize = (Math.random()*14 + 18) + "px";
+
+document.body.appendChild(item);
+
+setTimeout(() => {
+item.remove();
+},5000);
+
+}
+
+}
+
+window.onscroll = function(){
+
+if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+document.getElementById("scrollBtn").style.display = "block";
+}
+
+else{
+document.getElementById("scrollBtn").style.display = "none";
+}
+
+}
+
+function scrollToTop(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
